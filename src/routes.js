@@ -1,35 +1,37 @@
+import { buildRoutePath } from "./utils/build-route-path.js";
+
 export const routes = [
     {
         method: 'POST',
-        url: '/tasks',
+        url: buildRoutePath('/tasks'),
         handler: (req, res) => {
             return res.end();
         }
     },
     {
         method: 'GET',
-        url: '/tasks',
+        url: buildRoutePath('/tasks'),
         handler: (req, res) => {
             return res.end();
         }
     },
     {
         method: 'PUT',
-        url: '/tasks/:id',
+        url: buildRoutePath('/tasks/:id'),
         handler: (req, res) => {
             return res.end();
         }
     },
     {
         method: 'DELETE',
-        url: '/tasks/:id',
+        url: buildRoutePath('/tasks/:id'),
         handler: (req, res) => {
             return res.end();
         }
     },
     {
         method: 'PATCH',
-        url: '/tasks/:id/complete',
+        url: buildRoutePath('/tasks/:id/complete'),
         handler: (req, res) => {
             return res.end();
         }

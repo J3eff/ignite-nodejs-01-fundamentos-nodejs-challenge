@@ -44,7 +44,6 @@ export const routes = [
                 description: search
             } : null);
 
-
             return res.end(JSON.stringify(tasks));
         }
     },
@@ -62,7 +61,8 @@ export const routes = [
             const [task] = database.select('tasks', { id })
 
             if (!task)
-                return res.writeHead(404).end(JSON.stringify({ message: 'Task not found' }));
+                return res.writeHead(404)
+                    .end(JSON.stringify({ message: 'Task not found' }));
 
             database.update('tasks', id, {
                 title: title ?? task.title,
@@ -82,7 +82,8 @@ export const routes = [
             const [task] = database.select('tasks', { id })
 
             if (!task)
-                return res.writeHead(404).end(JSON.stringify({ message: 'Task not found' }));
+                return res.writeHead(404)
+                    .end(JSON.stringify({ message: 'Task not found' }));
 
             database.delete('tasks', id);
 
@@ -97,13 +98,14 @@ export const routes = [
 
             const [task] = database.select('tasks', { id })
 
-            if (!task) {
-                return res.writeHead(404).end()
-            }
+            if (!task)
+                return res.writeHead(404)
+                    .end(JSON.stringify({ message: 'Task not found' }))
+
 
             const isCompleted = !!task.completed_at;
             const completed_at = isCompleted ? null : new Date();
-            database.update('tasks', id, { completed_at });
+            database.update('tasks', id, { completed_at, updated_at: new Date() });
 
             return res.writeHead(204).end()
         }

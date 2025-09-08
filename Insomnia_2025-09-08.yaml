@@ -1,0 +1,143 @@
+type: collection.insomnia.rest/5.0
+name: "Desafio referente ao módulo: Fundamentos do Node.js"
+meta:
+  id: wrk_e4cc38316aa74b1fa823d244628da9ab
+  created: 1757304812532
+  modified: 1757304812532
+  description: ""
+collection:
+  - url: http://localhost:3333/tasks
+    name: Create task
+    meta:
+      id: req_f0af4988687e42f2a21a9f10d8e2c20e
+      created: 1757304823242
+      modified: 1757306498079
+      isPrivate: false
+      description: ""
+      sortKey: -1757304823242
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Plano de estudo - React",
+        	"description": "plano de estudo para aumentar conhecimento com React"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3333/tasks
+    name: List tasks
+    meta:
+      id: req_f12ca5673b0a409cbaa868b57f0c61eb
+      created: 1757305508929
+      modified: 1757305517422
+      isPrivate: false
+      description: ""
+      sortKey: -1757292219007.5
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3333/tasks/898a76c9-086b-4cbb-ae62-4707241a2e4d
+    name: Update task
+    meta:
+      id: req_dce14f1348354acb8456299b0cd578b8
+      created: 1757306514622
+      modified: 1757306564292
+      isPrivate: false
+      description: ""
+      sortKey: -1757306514622
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Plano de estudo - ReactJs"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3333/tasks/898a76c9-086b-4cbb-ae62-4707241a2e4d
+    name: Delete task
+    meta:
+      id: req_caf2ac63653e4196bc2ddeb3cb5fd819
+      created: 1757306587065
+      modified: 1757306604745
+      isPrivate: false
+      description: ""
+      sortKey: -1757306587065
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3333/tasks/008e7495-32dd-4792-a34e-98325ea4837c/complete
+    name: Complete task
+    meta:
+      id: req_7cbc9a6585304d8586ee684ce8226cca
+      created: 1757306719448
+      modified: 1757306743030
+      isPrivate: false
+      description: ""
+      sortKey: -1757306550843.5
+    method: PATCH
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_4688a9afb36f5bfb6c71a7e96cd2b96c08dd7a4d
+    created: 1757304812544
+    modified: 1757304812544
+environments:
+  name: Base Environment
+  meta:
+    id: env_4688a9afb36f5bfb6c71a7e96cd2b96c08dd7a4d
+    created: 1757304812534
+    modified: 1757304812534
+    isPrivate: false
